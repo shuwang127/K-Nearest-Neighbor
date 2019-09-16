@@ -67,7 +67,7 @@ if ~exist('condense1.mat')
         acc_tmp = sum( (label_train - est_train_tmp) == 0 ) / num_train;
         num_err = num_train - sum( (label_train - est_train_tmp) == 0 );
         cnt = cnt + 1;
-        if (acc_tmp > acc) || ((cnt > num_err) && (acc_tmp == acc))
+        if (acc_tmp > acc) || ((cnt > num_err) && (acc_tmp == acc)) || (cnt > 2 * num_err)
             % generate condensed set.
             cond_list(ind_diff_slct) = 1;
             dist = dist_tmp;
