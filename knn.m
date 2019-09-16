@@ -61,6 +61,6 @@ for kk = 1 : 10
     output_test = mode(NN(:, 1:kk), 2);
     diff_test = output_test - label_test;
     acc = sum(diff_test == 0) / num_test;
-    disp(['KNN algorithm with K = ', num2str(K)]);
+    disp(['KNN algorithm with K = ', num2str(kk)]);
     disp(['The testing accuracy: ', num2str(acc*100), '%']);
 end
