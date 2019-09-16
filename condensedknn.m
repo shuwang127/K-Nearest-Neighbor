@@ -68,10 +68,10 @@ if ~exist('condense.mat')
             '(', num2str(sum((label_train - est_train) == 0)), '/', num2str(num_train), ')']);
         if 1 == acc
             disp(['========Total ', num2str(sum(cond_list)), ' condensed samples========']);
+            save condense.mat data_cond label_cond num_cond cond_list;
             break;
         end
     end
-    save condense.mat data_cond label_cond num_cond cond_list;
 else
     load condense.mat;
 end
